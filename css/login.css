@@ -39,6 +39,8 @@ button:hover {
     background-color: white;
     outline: 0;
     border: 0;
+    font-size: 25px;
+    margin-bottom: 0;
 }
 
 .container {   
@@ -87,4 +89,10 @@ a {
 a:link{
     font-weight: bold;
     color: #377d71;
+}
+
+.login-font {
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
