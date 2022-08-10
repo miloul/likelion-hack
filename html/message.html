@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>채팅</title>
+    <link rel="stylesheet" href="../css/message.css"/>
     <script src="/socket.io/socket.io.js"></script>
     <script src="../js/message.js"></script>
   </head>
@@ -13,7 +14,7 @@
       </div>
       <div>
         <input type="text" id="test" placeholder="메시지를 입력해주세요..">
-        <button onclick="send()">전송</button>
+        <button onclick="send()" class="send">전송</button>
       </div>
     </div>
   </body>
