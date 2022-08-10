@@ -16,9 +16,9 @@ socket.on('connect', function() {
 
 /* 서버로부터 데이터 받은 경우 */
 socket.on('update', function(data) {
-  var chat = document.getElementById('chat')
+  var chat = document.getElementById('chat') //html에서 영역 가져오기
 
-  var message = document.createElement('div')
+  var message = document.createElement('div') //div create
   var node = document.createTextNode(`${data.name}: ${data.message}`)
   var className = ''
 
