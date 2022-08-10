@@ -24,7 +24,7 @@ app.use('/js', express.static('./js'))
 
 /* Get 방식으로 / 경로에 접속하면 실행 됨 */
 app.get('/', function(request, response) {
-  fs.readFile('message.html', function(err, data) {
+  fs.readFile('./html/message.html', function(err, data) {
     if(err) {
       response.send('에러')
     } else {
