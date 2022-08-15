@@ -1,0 +1,105 @@
+/* Main */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.main-over{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 20px;
+}
+
+.main-slogan{
+    color: white;
+    margin: 0;
+    font-size: 60px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.main-brand{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    letter-spacing: 15px;
+}
+
+/* Search Box */
+.search{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-53%);
+    background-color: rgba(187, 187, 187, 0.795);
+    width: 1100px;
+    height: 350px;
+    border: 3px solid #CACACA;
+    /* border-radius: 10px; */
+    margin: 20px
+}
+
+.srch-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.marg{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 250px;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid black;
+    padding: 0;
+    background-color: rgba(245, 245, 220, 0);
+    text-align: center;    
+}
+
+.location{
+    padding: 0;
+    background-color: rgba(245, 245, 220, 0);
+    text-align: center;    
+}
+
+input::placeholder{
+    color: rgba(75, 75, 75, 0.712);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+.date{
+    color: rgba(75, 75, 75, 0.712);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+.date::before{
+    content: attr(data-placeholder);
+    width: 100%;
+    color: rgba(75, 75, 75, 0.712);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+.date:focus::before,
+.date:valid::before{
+    display: none;
+}
+
