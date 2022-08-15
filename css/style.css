@@ -1,38 +1,111 @@
-.logo-wrapper{float:left;
-    padding: 15px 0;
-    overflow: hidden;
+/* common */
+.inner{
+    width: 1700px;
+    position:relative;
 }
-.logo {
-    padding: 0;
-    text-align: center;
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    border-bottom: 2px solid white;
+
 }
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6em;
+}
+
+a:hover{
+    color: #377d71;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo-img{
+    display: flex;
     width: 100px;
     margin-bottom: 0px;
 }
-.gnb{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+
+.navlink{
+    display: flex;
+    flex-direction: column;
 }
 
-.gnb li{float: right;}
+.gnb{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    font-size: 18px;
+}
 
-.gnb li a{
-    display: block;
-    color: black;
-    background-color: aliceblue;
-    text-decoration: none;
-    text-align: center;
-    padding: 8px
+.gnb li:nth-child(n+2){
+    margin-left: 30px;
+
 }
 
 .navbar-img{
-    width: 40px;
-    margin-bottom: 0px;
+    width: 60px;
+    filter: invert(100%) sepia(3%) saturate(356%) hue-rotate(240deg) brightness(114%) contrast(100%);
 }
 
-.gnb li a:hover {
-    color: #377D71;
+.main-img{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+h4{
+    font-size: 1.5em;
+    letter-spacing: 20px;
+}
+
+h2{
+    margin: 0;
+    font-size: 80px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+span{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    letter-spacing: 15px;
+}
+
+.recommand{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+h3{
+    font-size: 40px;
+    letter-spacing: 3px;
 }
