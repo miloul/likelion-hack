@@ -3,13 +3,18 @@
     padding-right: 150px;
 }
 
+.rightside {
+    float: right;
+    font-size: 20px;
+}
+
 .host-info-container {
-    width:  40%;
+    width:  90%;
 }
 
 .host-info-btn{
     box-sizing: border-box;
-    width: 100%;
+    width: 55%;
     height: 70px;
     border: 1px solid #D9D9D9;
     border-radius: 8px;
@@ -19,7 +24,7 @@
 }
 
 textarea {
-    width: 100%;
+    width: 60%;
     height: 170px;
     resize: none;
 }
@@ -29,11 +34,14 @@ textarea {
     margin-bottom: 15px;
 }
 
-#drop-content{
-
+.drop-content{
+    float: right;
+    width: 45%;
     z-index: 1;
+    margin-top: 15px;
 }
-#drop-content a{
+
+.drop-content a{
     display:block;
     font-size: 20px;
     background-color: #dfdfdf;
