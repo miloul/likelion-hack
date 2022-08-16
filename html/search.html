@@ -17,55 +17,61 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div class="nav inner">
-        <!-- Logo -->
-        <div class="logo">
-            <a href="home.html" class="brand-name">A N L I</a>
-            <a href="home.html">
-                <img src="../img/logo.png" class="logo-img" alt="">
-            </a>
-        </div>
-
-        <!-- Navbar links -->
-        <div class="navlink">
-            <ul class="gnb">
-                <li><a href="home.html" class="nav-name">Home</a></li>
-                <li><a href="search.html" class="nav-name">Search</a></li>
-                <li><a href="hosting.html" class="nav-name">Hosting</a></li>
-                <li><a href="wishlist.html"><img src="../img/wishlist.png" class="nav-img" alt=""></a></li>
-                <li><a href="message.html"><img src="../img/message.png" class="nav-img" alt=""></a></li>
-                <li><a href="mypage.html"><img src="../img/profile.png" class="nav-img" alt=""></a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Background image -->
-    <img src="../img/main.jpg" class="main-img inner" alt="">
-
-    <!-- Main -->
     <div class="main">
-        <h4 class="main-over">언제 어디서나 편안하게 떠나다</h4>
-        <h2 class="main-slogan">FOR YOUR COZY LIFE, <span class="main-brand">ANLI</span></h2>
-    </div>
+        <!-- Navbar -->
+        <div class="nav inner">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="home.html" class="brand-name">A N L I</a>
+                <a href="home.html">
+                    <img src="../img/logo.png" class="logo-img" alt="">
+                </a>
+            </div>
 
-    <!-- Search Box -->
-    <div class="search">
-        <div class="srch-list">
-            <input type="text" class="location marg" placeholder="지역">
-            
-            <input type="date" class="date marg" name="startDate" value={startDateValue} 
-            data-placeholder="날짜 선택" required aria-required="true"/>
+            <!-- Navbar links -->
+            <div class="navlink">
+                <ul class="gnb">
+                    <li><a href="home.html" class="nav-name">Home</a></li>
+                    <li><a href="search.html" class="nav-name">Search</a></li>
+                    <li><a href="hosting.html" class="nav-name">Hosting</a></li>
+                    <li><a href="wishlist.html"><img src="../img/wishlist.png" class="nav-img" alt=""></a></li>
+                    <li><a href="message.html"><img src="../img/message.png" class="nav-img" alt=""></a></li>
+                    <li><a href="mypage.html"><img src="../img/profile.png" class="nav-img" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
 
-            <button class="room-option marg" onclick="KindOfHome()"><h3>숙소유형<span class="rightside"></span></h3></button>
-            <div style="display: none;" class="drop-content" id="kindofhome">
-                <a hreaf='#'>원룸</a>
-                <a hreaf='#'>투룸</a>
-                <a hreaf='#'>오피스텔</a>
+        <!-- Background image -->
+        <!-- <img src="../img/main.jpg" class="main-img inner" alt=""> -->
+
+        <!-- Slogan -->
+        <div class="slogan">
+            <h4 class="main-over">언제 어디서나 편안하게 떠나다</h4>
+            <h2 class="main-slogan">FOR YOUR COZY LIFE, <span class="main-brand">ANLI</span></h2>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search">
+            <div class="srch-list">
+                <input type="text" class="location marg" placeholder="지역">
+
+                <input type="date" class="date marg" name="startDate" value={startDateValue} data-placeholder="날짜 선택"
+                    required aria-required="true" />
+
+                <button class="room-option marg" onclick="KindOfHome()">
+                    <h3>숙소유형<span class="rightside"></span></h3>
+                </button>
+                <div style="display: none;" class="drop-content" id="kindofhome">
+                    <a hreaf='#'>원룸</a>
+                    <a hreaf='#'>투룸</a>
+                    <a hreaf='#'>오피스텔</a>
+                </div>
             </div>
         </div>
     </div>
 
+
 </body>
 <script src="../js/search.js"></script>
+
 </html>
