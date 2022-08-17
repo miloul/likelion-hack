@@ -1,5 +1,5 @@
 #body-padding {
-    padding-left: 150px;
+    padding-left: 200px;
     padding-right: 150px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .host-info-container {
-    width:  90%;
+    width:  80%;
 }
 
 .host-info-btn{
@@ -18,20 +18,30 @@
     height: 70px;
     border: 1px solid #D9D9D9;
     border-radius: 8px;
-
+    text-align: left;
     margin-top: 15px;
     background-color: white;
 }
 
-textarea {
-    width: 60%;
-    height: 170px;
-    resize: none;
+h4 {
+    margin-left: 5px;
 }
 
-#imageFileOpenInput{
-    margin-top: 50px;
-    margin-bottom: 15px;
+textarea {
+    width: 90%;
+    resize: none;
+    border: none;
+}
+
+textarea::placeholder, input::placeholder {
+    color: #377D71;
+}
+
+.placeholder {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #377D71;
+    font-size: 13.5px;
 }
 
 .drop-content{
@@ -41,8 +51,28 @@ textarea {
     margin-top: 15px;
 }
 
-.drop-content a{
-    display:block;
+.drop-content-date {
+    float: right;
+    width: 44%;
+    height: 65px;
+    z-index: 1;
+    margin-top: 16px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.drop-content-info {
+    float: right;
+    width: 44%;
+    z-index: 1;
+    margin-top: 16px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.drop-content{
     font-size: 20px;
     background-color: #dfdfdf;
     color: black;
@@ -56,6 +86,39 @@ textarea {
     display: inline-block;
 }
 
-#image-container {
-    width: 100%;
+#image_container {
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    margin-top: 100px;
+    text-align: center;
 }
+
+#imageFileOpenInput {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info-container {
+    width: 55%;
+    border: 1px solid #D9D9D9;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+#marginleft {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.default-btn {   
+    background-color: #377d71;   
+    width: 20%;  
+    color: white;   
+    padding: 15px;   
+    margin: 10px 0px;   
+    border: none;   
+    cursor: pointer;   
+    border-radius: 10px;
+    float: right;
+}   

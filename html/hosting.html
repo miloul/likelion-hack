@@ -7,46 +7,79 @@
     <title>Hosting</title>
     <link rel="stylesheet" href="../css/hosting.css"/>
     <link rel="stylesheet" href="../css/default-style.css"/>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-    <div id="body-padding">
+    <form id="body-padding">
         <!-- input image -->
-        <input type="file" name="file" id="imageFileOpenInput" accept="image/*" onchange="loadFile(event);">
-        <div id="image_container"></div>
+        <div id="image_container">
+            <input type="file" name="img-files" id="imageFileOpenInput" accept="image/*" onchange="readInputFile(event);" multiple>
+            <div id="image"></div>
+        </div>
         <!-- other info -->
         <div class="host-info-container">
+            <div class="info-container">
+                <h4>호스팅 게시글의 제목을 알려주세요.</h4>
+                <textarea cols="50" name="host-title" autofocus required wrap="hard" placeholder="예시) 채광좋고 넓은 원룸, 지하철 역까지 5분 투룸"></textarea>
+            </div>
+            <div class="info-container">
+                <h4>호스팅할 집의 가격을 알려주세요.</h4>
+                <textarea cols="50" name="host-price" autofocus required wrap="hard" placeholder="*월세 기준으로 제시해주세요. 예시) 1달 당 48만원"></textarea>
+            </div>
             <div>
-                <button class="host-info-btn" onclick="KindOfHome()"><h3>호스팅할 숙소 유형을 알려주세요. <span class="rightside">></span></h3></button>
-                <div style="display: none;" class="drop-content" id="kindofhome">
-                    <a hreaf='#'>원룸</a>
-                    <a hreaf='#'>투룸</a>
-                    <a hreaf='#'>오피스텔</a>
+                <button class="host-info-btn" id="drop-home" onclick="KindOfHome()"><h3>호스팅할 숙소 유형을 알려주세요. <span class="rightside">></span></h3></button>
+                <select name="select-home" style="display: none; margin-top:20px" class="drop-content" id="kindofhome">
+                    <option class="select-option" value="not-choose" selected>선택</option>
+                    <option class="select-option" value="oneroom">원룸</option>
+                    <option class="select-option" value="tworoom">투룸</option>
+                    <option class="select-option" value="op">오피스텔</option>
+                </select>
+            </div>
+            <div class="info-container">
+                <h4>집의 상세 주소를 입력해주세요.</h4>
+                <textarea cols="50" name="host-location" autofocus required wrap="hard" placeholder="예시) 채광좋고 넓은 원룸, 지하철 역까지 5분 투룸"></textarea>
+            </div>
+            <div class="info-container">
+                <h4>가능한 최소 기간을 설정해주세요.</h4>
+                <textarea cols="50" name="host-smaller-period" autofocus required wrap="hard" placeholder="*월 단위로 입력해 주세요. 예시) 2개월, 6개월"></textarea>
+            </div>
+            <div>
+                <button class="host-info-btn" onclick="InputDays()"><h3>가능한 최대 기간을 설정해주세요.<span class="rightside">></span></h3></button>
+                <div style="display: none;" class="drop-content-date" id="inputdays">
+                    <p><input type='date' name='host-startDay'/>~
+                    <input type='date' name='host-lastDay'/></p>
                 </div>
             </div>
             <div>
-                <button class="host-info-btn" onclick="Location()"><h3>숙소 위치는 어디인가요? <span class="rightside">></span></h3></button>
-                <form style="display: none;" class="drop-content" id="location">
-                    <input type="text" placeholder="숙소 위치" name="location" required>
-                </form>
+                <button class="host-info-btn" onclick="InputInfo()"><h3>숙소의 공간 정보에 대해 알려주세요.<span class="rightside">></span></h3></button>
+                <div style="display: none;" class="drop-content-info" id="inputinfo">
+                    <p>
+                        &nbsp; 실평수: <input type="text" name="host-floor-space" placeholder="예시) 7평">
+                        <br>&nbsp; 욕실 수: <input type="text" name="host-bathroom" placeholder="예시) 1개">
+                        <br>&nbsp; 방 수/타입: <input type="text" name="host-room" placeholder="예시) 1개, 단층">
+                        <br>&nbsp; 침대 수/타입: <input type="text" name="host-bed" placeholder="예시) 1개, 싱글">
+                        <br>&nbsp; 기본 구조 설명: <input type="text" name="host-basic-info" placeholder="예시) 부엌, 침실">
+                    </p>
+                </div>
             </div>
-            <div>
-                <button class="host-info-btn"><h3>가능한 기간을 설정해주세요<span class="rightside">></span></h3></button>
+            <div class="info-container">
+                <h4>숙소가 가진 옵션을 입력해주세요.</h4>
+                <textarea cols="50" name="host-option" autofocus required wrap="hard" placeholder="예시) 냉장고, 가스레인지, 세탁기, 인터넷됨, 옷장, 주차장있음 등"></textarea>
             </div>
-            <div>
-                <button class="host-info-btn"><h3>가능한 최소/최대 기간을 설정해주세요.<span class="rightside">></span></h3></button>
+            <div class="info-container">
+                <h4>숙소에 대해 강조하고 싶은 점이나, 장점 등을 설명해주세요</h4>
+                <textarea cols="50" name="host-description" style="height: 170px;" autofocus required wrap="hard" placeholder="숙소를 호스팅하게 된 이유에 대해 간략히 적어주는 것도 좋아요."></textarea>
             </div>
-            <div>
-                <button class="host-info-btn"><h3>숙소의 공간 정보에 대해 알려주세요.<span class="rightside">></span></h3></button>
-            </div>
-            <div>
-                <button class="host-info-btn"><h3>숙소가 가지고 있는 옵션을 선택해주세요.<span class="rightside">></span></h3></button>
-            </div>
-            <div>
-                <h3>숙소에 대해 강조하고 싶은 점이나, 장점 등을 설명해주세요</h3>
-                <textarea cols="50" autofocus required wrap="hard" placeholder="숙소를 호스팅하게 된 이유에 대해 간략히 적어주는 것도 좋아요"></textarea>
+            <div class="info-container">
+                <div id="marginleft">
+                    <div>첨부파일  :  <a href="../전대사용동의서.pdf">전대사용동의서</a></div>
+                    <div class="placeholder">첨부된 전대사용동의서 작성하여 스캔한 후 파일을 업로드 해주세요.</div>
+                    <input type="file" name="host-contract-file" required>
+                </div>
             </div>
         </div>
-    </div>
+        <button type="submit" class="default-btn">등록하기</button>
+    </form>
     <!-- footer -->
     <footer>
         <div class="footer-container">
