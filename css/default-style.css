@@ -151,3 +151,33 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* nav var _ black version*/
+.navB{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    border-bottom: 2px solid black;
+}
+
+.brand-nameB{
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.nav-nameB{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-imgB{
+    width: 50px;
+}
