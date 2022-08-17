@@ -38,7 +38,38 @@
                 </ul>
             </div>
         </div>
-
+        <!-- Payment -->
+        <div class="pymbox inner">
+            <div class="room-pm">
+                <img src="../img/rset1/room2-1.jpg" class="room-pm-img" alt="">
+                <div class="room-data">
+                    <h2 class="room-pm-name">채광좋고 넓은 원룸</h2>
+                    <h4 class="room-pm-loc">서울 종로구</h4>
+                </div>
+            </div>
+            <div class="reserv">
+                <h4 class="reserv-conf">확인 및 결제</h4>
+                <div class="bottom-line">
+                    <h4 class="reserv-ltr">입주 날짜</h4>
+                    <input type="date" class="reserv-start-btn" name="startDate" value={startDateValue} data-placeholder="날짜 선택"
+                    required aria-required="true" />
+                </div>
+                <div class="bottom-line">
+                    <h4 class="reserv-ltr">거주 개월 수</h4>
+                    <div class="reserv-count">
+                        <button class="reserv-count-btn" onclick="count('plus')">+</button>
+                        <h4 id="result" class="reserv-count-result">0</h4>
+                        <button class="reserv-count-btn" onclick="count('minus')">-</button>
+                    </div>
+                </div>
+                <div class="bottom-line">
+                    <h4 class="reserv-ltr">월세</h4>
+                    <h4 class="reserv-price">480,000원 <span class="reserv-price-month">/달</span></h4>
+                    <h4 class="reserv-ltr">결제 방식</h4>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+<script src="../js/payment.js"></script>
 </html>
