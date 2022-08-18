@@ -69,6 +69,7 @@
     width: 600px;
     border-bottom: 2px solid rgb(212, 212, 212);
     padding-bottom: 20px;
+    padding-left: 40px;
     margin-bottom: 0;
 }
 
@@ -82,6 +83,7 @@
     margin-bottom: 20px;
 }
 
+/* 날짜 선택 버튼 */
 .reserv-start-btn{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
@@ -90,6 +92,20 @@
     text-align: center;
     width: 150px;
     border: 2px solid rgb(212, 212, 212);
+}
+
+/* 확인 버튼 */
+.reserv-conf-btn{
+    color: white;
+    font-size: 17px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    padding: 0;
+    background-color: #377D71;
+    border: none;
 }
 
 .reserv-count{
@@ -126,7 +142,33 @@
     margin-bottom: 0;
 }
 
-.reserv-price{
+/* 월세, 결제 방식 일렬로 */
+.bottom-line-rsv{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    border-bottom: 2px solid rgb(212, 212, 212);
+    padding-bottom: 0;
+    padding-left: 40px;
+    margin-bottom: 0;
+}
+
+/* 월세, 결제방식 아래로 정렬 */
+.down{
+    display: flex;
+    flex-direction: column;
+}
+
+.reserv-month{
+    border-right: 2px solid rgb(212, 212, 212);
+    padding-right: 80px;
+}
+
+.reserv-pay{
+    padding-left: 80px;
+}
+
+.reserv-way{
     color: #ffa8a8;
     font-size: 23px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -142,4 +184,21 @@
     font-weight: 500;
     letter-spacing: 3px;
     margin-top: 0;
+}
+
+.reserv-expln{
+    width: 600px;
+    color:black;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-left: 20px;
+}
+
+.bold{
+    color:black;
+    font-size: 19px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
 }

@@ -51,22 +51,30 @@
                 <h4 class="reserv-conf">확인 및 결제</h4>
                 <div class="bottom-line">
                     <h4 class="reserv-ltr">입주 날짜</h4>
-                    <input type="date" class="reserv-start-btn" name="startDate" value={startDateValue} data-placeholder="날짜 선택"
-                    required aria-required="true" />
+                    <input id="input_date" type="date" class="reserv-start-btn"/>
+                    <input id="input_submit" type="submit" class="reserv-conf-btn" onclick="input()" value="확인">
                 </div>
                 <div class="bottom-line">
                     <h4 class="reserv-ltr">거주 개월 수</h4>
                     <div class="reserv-count">
-                        <button class="reserv-count-btn" onclick="count('plus')">+</button>
-                        <h4 id="result" class="reserv-count-result">0</h4>
                         <button class="reserv-count-btn" onclick="count('minus')">-</button>
+                        <h4 id="result" class="reserv-count-result">0</h4>
+                        <button class="reserv-count-btn" onclick="count('plus')">+</button>
                     </div>
                 </div>
-                <div class="bottom-line">
-                    <h4 class="reserv-ltr">월세</h4>
-                    <h4 class="reserv-price">480,000원 <span class="reserv-price-month">/달</span></h4>
-                    <h4 class="reserv-ltr">결제 방식</h4>
+                <div class="bottom-line-rsv">
+                    <div class="reserv-month down">
+                        <h4 class="reserv-ltr">월세</h4>
+                        <h4 class="reserv-way">480,000원 <span class="reserv-price-month">/달</span></h4>
+                    </div>
+                    <div class="reserv-pay down">
+                        <h4 class="reserv-ltr">결제 방식</h4>
+                        <h4 class="reserv-way">무통장입금</h4>
+                    </div>
                 </div>
+                <h4 class="reserv-expln">희망하시는 거주 개월 수는 <span id="month" class="bold">0</span>개월입니다. <br>
+                    금일 무통장 입금으로 결제하실 경우, <br> <span id="result_month" class="bold">0</span>월부터 매달 
+                    <span id="result_day" class="bold">0</span>일에 해당 계좌로 <span class="bold">480,000원</span>을 입금하셔야합니다.</h4>
             </div>
         </div>
     </div>
