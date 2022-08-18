@@ -6,11 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WishList</title>
     <link rel="stylesheet" href="../css/default-style.css"/>
+    <link rel="stylesheet" href="../css/search.css"/>
+    <script>
+        function popup(){
+            var click = document.getElementById('popup');
+            if(click.style.display === "none"){
+                click.style.display = "block";
+        
+            }else{
+                click.style.display = "none";                 
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- header(nav-bar) -->
+    <div id="main">
+        <div class="navB inner">
+          <!-- Logo -->
+            <div class="logo">
+              <a href="home.html" class="brand-nameB">A N L I</a>
+              <a href="home.html">
+                  <img src="../img/logo.png" class="logo-img" alt="">
+              </a>
+            </div>
+    
+            <!-- Navbar links -->
+            <div class="navlink">
+                <ul class="gnb">
+                  <li><a href="home.html" class="nav-nameB">Home</a></li>
+                  <li><a href="#" onclick="popup()" id="content" class="nav-nameB">Search</a></li>
+                  <li><a href="hosting.html" class="nav-nameB">Hosting</a></li>
+                  <li><a href="wishlist.html"><img src="../img/wishlist.png" class="nav-imgB" alt=""></a></li>
+                  <li><a href="message.html"><img src="../img/message.png" class="nav-imgB" alt=""></a></li>
+                  <li><a href="mypage.html"><img src="../img/profile.png" class="nav-imgB" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
     <!-- wish list -->
 
+    <!-- Search Box -->
+    <div id="popup">
+        <form class="search-container" >
+            <!-- 지역 -->
+            <button id="exit">X</button>
+            <div class="bottom">
+                <input type="text" class="location marg" placeholder="지역" required>
+                <!-- 입주 날짜 -->
+                <input type="date" class="date marg" name="startDate" value={startDateValue} data-placeholder="날짜 선택"
+                required aria-required="true" />
+            </div>
+            <button class="default-btn" type="submit">검색</button>
+        </form>
+    </div>
     <!-- footer -->
     <footer>
         <div class="footer-container">
@@ -22,5 +70,4 @@
             <div class="copyright">Copyright(c)2002 by 안리. All Page content is property of ANLI</div>
         </div>
     </footer>
-</body>
 </html>

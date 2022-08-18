@@ -1,42 +1,19 @@
-/* Main */
-.main{
-    background-image: url("../img/main2.jpg");
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+#popup {
+    display: none; /*숨기기*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.503);
 }
 
-.slogan{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 270px;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-.main-over{
-    color: white;
-    font-size: 18px;
-    letter-spacing: 20px;
-}
-
-.main-slogan{
-    color: white;
-    margin: 0;
-    font-size: 60px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 300;
-    letter-spacing: 5px;
-}
-
-.main-brand{
-    color: white;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-    letter-spacing: 15px;
+#exit {
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    border: 0;
+    outline: 0;
+    background-color: rgba(238, 238, 238, 0.788);
 }
 
 /* Search Box */
@@ -48,13 +25,28 @@
     position: relative;
     top: 45%;
     left: 50%;
-    transform: translate(-53%, -50%);
     background-color: rgba(238, 238, 238, 0.788);
-    width: 800px;
+    width: 80%;
     height: 300px;
     border: 3px solid #e7e7e7;
-    /* border-radius: 10px; */
+    border-radius: 15px;
     margin: 20px
+}
+
+.search-container {
+    text-align: center;
+    flex-direction: column;
+    height: 300px;
+    width: 60%;
+    background-color: rgba(238, 238, 238, 0.788);
+    border: 3px solid #e7e7e7;
+    border-radius: 15px;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+ 
+.bottom {
+    margin-top: 100px;
 }
 
 .srch-list{
@@ -125,6 +117,24 @@ input:focus{
 .date:valid::before{
     display: none;
 }
+
+.default-btn {   
+    background-color: #377d71;   
+    width: 8%;  
+    color: white;  
+    margin-top: 100px;
+    margin-right: 30px; 
+    padding: 10px;   
+    border: none;   
+    cursor: pointer;   
+    border-radius: 10px;
+    float: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 3px;
+}   
 
 .search-btn{
     position: absolute;

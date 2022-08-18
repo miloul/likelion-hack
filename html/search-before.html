@@ -11,22 +11,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Ubuntu:wght@300;400;700&display=swap"  rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/search.css" />
-    <link rel="stylesheet" href="../css/default-style.css" />
 </head>
-<body>
-    <!-- header(nav-bar) -->
 
+<body>
     <!-- Search Box -->
-    <form class="search-container" >
-        <!-- 지역 -->
-        <button id="exit">X</button>
-        <div class="bottom">
-            <input type="text" class="location marg" placeholder="지역" required>
+    <div class="search" id="popup">
+        <div class="srch-list">
+            <!-- 지역 -->
+            <input type="text" class="location marg" placeholder="지역">
             <!-- 입주 날짜 -->
             <input type="date" class="date marg" name="startDate" value={startDateValue} data-placeholder="날짜 선택"
-            required aria-required="true" />
+                required aria-required="true" />
+
+            <!-- 숙소 유형 -->
+            <!-- <button class="room-option marg" onclick="KindOfHome()">
+                <h3>숙소유형<span class="rightside"></span></h3>
+            </button>
+            <div style="display: none;" class="drop-content" id="kindofhome">
+                <a hreaf='#'>원룸</a>
+                <a hreaf='#'>투룸</a>
+                <a hreaf='#'>오피스텔</a> -->
+            <!-- </div> -->
         </div>
-        <button class="default-btn" type="submit">검색</button>
-    </form>
+
+            <!-- 검색 버튼 -->
+        <a href="search.html"><input type="button" class="search-btn" value="검색"></a>
+    </div>
 </body>
+<script src="../js/search.js"></script>
+
 </html>
