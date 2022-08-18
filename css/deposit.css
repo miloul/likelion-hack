@@ -1,0 +1,28 @@
+:root{
+    --linecolor: rgb(240, 240, 240);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 수직 정렬 */
+.flex_column{
+    display: flex;
+    flex-direction: column;
+}
+
+.deposit-box{
+    margin-top: 150px;
+}
+
+.font-main-bold{
+    color:black;
+    font-size: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
