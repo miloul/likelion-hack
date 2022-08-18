@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="../css/payment.css">
     <link rel="stylesheet" href="../css/default-style.css" />
 </head>
+
 <body>
     <div class="main">
         <!-- Navbar -->
@@ -50,26 +52,60 @@
             <div class="reserv">
                 <h4 class="reserv-conf">확인 및 결제</h4>
                 <div class="bottom-line">
-                    <h4 class="reserv-ltr">입주 날짜</h4>
-                    <input type="date" class="reserv-start-btn" name="startDate" value={startDateValue} data-placeholder="날짜 선택"
-                    required aria-required="true" />
-                </div>
-                <div class="bottom-line">
-                    <h4 class="reserv-ltr">거주 개월 수</h4>
-                    <div class="reserv-count">
-                        <button class="reserv-count-btn" onclick="count('plus')">+</button>
-                        <h4 id="result" class="reserv-count-result">0</h4>
-                        <button class="reserv-count-btn" onclick="count('minus')">-</button>
+                    <h4 class="reserv-ltr  margin-top">입주 날짜</h4>
+                    <div class="flex_row">
+                        <input id="input_date" type="date" class="reserv-start-btn" />
+                        <input id="input_submit" type="submit" class="reserv-conf-btn" onclick="input()" value="확인">
                     </div>
                 </div>
                 <div class="bottom-line">
-                    <h4 class="reserv-ltr">월세</h4>
-                    <h4 class="reserv-price">480,000원 <span class="reserv-price-month">/달</span></h4>
-                    <h4 class="reserv-ltr">결제 방식</h4>
+                    <h4 class="reserv-ltr  margin-top">거주 개월 수</h4>
+                    <div class="reserv-count">
+                        <button class="reserv-count-btn" onclick="count('minus')">-</button>
+                        <h4 id="result" class="reserv-count-result">0</h4>
+                        <button class="reserv-count-btn" onclick="count('plus')">+</button>
+                    </div>
+                </div>
+                <div class="bottom-line-rsv">
+                    <div class="reserv-month down">
+                        <h4 class="reserv-ltr margin-top">월세</h4>
+                        <h4 class="reserv-way">480,000원 <span class="reserv-price-month">/달</span></h4>
+                    </div>
+                    <div class="reserv-pay down">
+                        <h4 class="reserv-ltr margin-top">결제 방식</h4>
+                        <h4 class="reserv-way">무통장입금</h4>
+                    </div>
+                </div>
+                <div class="border-all">
+                    <div class="font_file">첨부파일 : <a href="../전대사용동의서-전차인용.hwp" class="a-font-design">전대사용동의서</a></div>
+                    <div class="placeholder">첨부된 전대사용동의서 작성하여 스캔한 후 파일을 업로드 해주세요.</div>
+                    <input type="file" name="host-contract-file" required>
                 </div>
             </div>
         </div>
+        <div class="last-box">
+            <h4 class="reserv-expln">희망하시는 거주 개월 수는 <span id="month" class="bold">0</span>개월입니다.
+                금일 무통장 입금으로 결제하실 경우, <br> <span id="result_month" class="bold">0</span>월부터 매달
+                <span id="result_day" class="bold">0</span>일에 해당 계좌로 <span class="bold">480,000원</span>을 입금하셔야합니다.
+            </h4>
+            <input type="button" class="pay-btn" value="결제하기" onclick="location.href='deposit.html'">
+        </div>
+
     </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div>이용약관 | <span class="bolder">개인정보처리방침</span></div>
+            <p>
+            <div class="fontsize13"><span class="bolder">전화문의</span> : 053-950-5114 &ensp;<span class="bolder">이메일
+                    문의</span> : anli@likelion.org</div>
+            <div class="fontsize13"><span class="bolder">소재지</span> : 우)41566 대구광역시 북구 대학로 80 (산격동,경북대학교)</div>
+            </p>
+            <div class="copyright">Copyright(c)2002 by 안리. All Page content is property of ANLI</div>
+        </div>
+    </footer>
 </body>
 <script src="../js/payment.js"></script>
+
 </html>
